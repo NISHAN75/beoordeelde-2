@@ -60,11 +60,31 @@
             $('.headerBot__scroll').width(progress + '%');
         }
 
+        // side__colors-item-image
+        $(".side__colors-item-image").click(function(){
+          $(".gallary-swipper-section").addClass('active')
+        });
+        $(".modalColor__close").click(function(){
+          $(".gallary-swipper-section").removeClass('active')
+        });
+
         // Call the function on scroll
         $(window).scroll(updateProgressBar);
 
         // Call the function on resize
         $(window).resize(updateProgressBar);
+        let swiper = new Swiper(".gallary-slider", {
+            spaceBetween: 5,
+            slidesPerView: 6,
+            freeMode: true,
+            watchSlidesProgress: true,
+          });
+          var swiper2 = new Swiper(".gallary-slider2", {
+            spaceBetween: 5,
+            thumbs: {
+              swiper: swiper,
+            },
+          });
 
         // appointment
         $('.Offerte-btn').click(function(){
