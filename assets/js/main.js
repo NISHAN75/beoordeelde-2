@@ -87,9 +87,31 @@
           });
 
         // appointment
-        $('.Offerte-btn').click(function(){
+        $('.Offerte-btn').click(function(event){
+          event.preventDefault();
+          alert('hi')
+            let attrValue = $(this).attr("btn-check");
+            if(attrValue == 1){
+              let checkDiv = $('#step-1');
+              if ($('input[name="useCase"]:checked').length === 0) {
+                $('.error-message').show(); // Display error message
+              } else {
+                $('.error-message').hide(); // Hide error message if radio button is checked
+              }
+        
+              let newValue = parseInt(attrValue) + 1;
+              this.setAttribute("btn-check", newValue);
+            }
+            else if(attrValue == 2){
 
-            let 
+              let newValue = parseInt(attrValue) + 1;
+              this.setAttribute("btn-check", newValue);
+            }
+             else if(attrValue == 3){
+              
+              let newValue = parseInt(attrValue) + 1;
+              this.setAttribute("btn-check", newValue);
+            }
 
 
 

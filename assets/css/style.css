@@ -4832,5 +4832,8 @@ body.active {
     margin: 0 auto;
     padding: 5px;
 }
+.d-none{
+    display: none;
+}
 
 /* swipper css end */
